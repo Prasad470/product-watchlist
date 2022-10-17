@@ -1,6 +1,7 @@
 from flask import *
 import sqlalchemy as db
 from sqlalchemy import text
+import click
 
 engine = db.create_engine("postgresql://whrqxdrsctgpje:6fe1cfdd46b896ad284762304ba8486d2b430726fd739f679c6c3e838c079dcc@ec2-44-199-9-102.compute-1.amazonaws.com:5432/d5bplkt2v50bbi", echo=True)
 
@@ -79,5 +80,8 @@ def parse(data):
         ans.append(curr)
     return ans
 
-metadata_obj.create_all(engine)
+
+@click.command(name='create_tables')
+def create_tables():
+	metadata_obj.create_all(engine)
 print("success")
