@@ -15,7 +15,7 @@ UPLOAD_FOLDER = 'static/uploads'
 ALLOWED_EXTENSIONS = set(['jpeg', 'jpg', 'png', 'gif'])
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 # Defining the Engine
-engine = db.create_engine("postgres://whrqxdrsctgpje:6fe1cfdd46b896ad284762304ba8486d2b430726fd739f679c6c3e838c079dcc@ec2-44-199-9-102.compute-1.amazonaws.com:5432/d5bplkt2v50bbi", echo=True)
+engine = db.create_engine("postgresql://whrqxdrsctgpje:6fe1cfdd46b896ad284762304ba8486d2b430726fd739f679c6c3e838c079dcc@ec2-44-199-9-102.compute-1.amazonaws.com:5432/d5bplkt2v50bbi", echo=True)
 
 #with app.app_context():
 #	db.create_all()
