@@ -43,11 +43,11 @@ def getLoginDetails():
 def root():
 	loggedIn, firstName, noOfItems = getLoginDetails() 
 	sql=text('''SELECT "productId", name, price, description, image, stock
-	FROM public.products''')
+	FROM products''')
 	results = engine.execute(sql)
 	itemData = results.fetchall()
 	sql=text('''SELECT "categoryId", name
-	FROM public.categories''')
+	FROM categories''')
 	results = engine.execute(sql)
 	categoryData = results.fetchall()
 	itemData = parse(itemData)   
