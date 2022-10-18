@@ -6,7 +6,7 @@ import click
 
 
 #engine =db.create_engine("postgresql://postgres:admin@localhost:5432/mydb", echo=True)
-engine = db.create_engine("postgresql://whrqxdrsctgpje:6fe1cfdd46b896ad284762304ba8486d2b430726fd739f679c6c3e838c079dcc@ec2-44-199-9-102.compute-1.amazonaws.com:5432/d5bplkt2v50bbi", echo=True)
+engine = db.create_engine("postgresql://rtrhmetlvhpaeg:4def93b38a7244c27528694434fab9a34739ce583a772b037d4b947e538ca751@ec2-44-209-24-62.compute-1.amazonaws.com:5432/d1uo9krvi1hdrl", echo=True)
 
 # Create the Metadata Object
 metadata_obj = db.MetaData()
