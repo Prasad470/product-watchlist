@@ -33,7 +33,7 @@ def getLoginDetails():
 		userId=a[0][0]
 		firstName = a[0][1]
 		sql= text('''SELECT  count("productId_kart")
-	FROM kart where "userId_kart" = '{}' '''.format(userId))
+	FROM kart where "userId_kart" = {} '''.format(userId))
 		results=engine.execute(sql)
 		b = results.fetchall()
 		noOfItems= b[0][0]
