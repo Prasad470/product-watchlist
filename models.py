@@ -15,8 +15,8 @@ kart = db.Table(
 	'kart',										
 	metadata_obj,
 								
-	db.Column('userId',db.Integer,db.ForeignKey("users.userId")),
-	db.Column('productId',db.Integer,db.ForeignKey("products.productId")),				
+	db.Column('userId_kart',db.Integer,db.ForeignKey("users.userId")),
+	db.Column('productId_kart',db.Integer,db.ForeignKey("products.productId")),				
 )
 
 users = db.Table(
