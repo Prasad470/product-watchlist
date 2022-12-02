@@ -1,5 +1,6 @@
 table {
-	border-width: 10px;
+	border-width: 50px;
+	border-spacing: 20px;
 }
 
 #itemImage {

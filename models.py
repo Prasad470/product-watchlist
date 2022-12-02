@@ -19,6 +19,51 @@ kart = db.Table(
 	db.Column('productId_kart',db.Integer,db.ForeignKey("products.productId")),				
 )
 
+
+
+customer= db.Table(
+	'customer',
+	metadata_obj,
+    db.Column('id',db.Integer, primary_key=True, nullable=False),
+    db.Column('name',db.String(45), nullable=False),
+    db.Column('email',db.String(45), nullable=False),
+    db.Column('phone',db.String(45), nullable=False),
+    db.Column('currentBalance',db.String(20), nullable=False),
+    db.Column('accountNo',db.Integer, nullable=False),
+    db.Column('time',db.String(45), nullable=False),
+)
+
+
+Members = db.Table (
+	'members',
+	metadata_obj,
+	db.Column('id',db.Integer, primary_key=True),
+    db.Column('firstname',db.String(30)),
+    db.Column('lastname',db.String(30)),
+    db.Column('phoneno',db.Integer),
+    db.Column('email',db.String(30)),
+    db.Column('joindate',db.String(11)),
+    db.Column('startdate',db.String(11)),
+    db.Column('enddate',db.String(11)),
+    db.Column('address',db.String(100)),
+    db.Column('status',db.String(10)),
+    db.Column('training',db.String(10)),
+    db.Column('amount',db.Integer),
+)
+
+
+
+Users= db.Table(
+	'Users',
+	metadata_obj,
+	db.Column('name',db.String(50), nullable=False, primary_key=True),
+	db.Column('username',db.String(20), unique=True, nullable=False),
+	db.Column('password',db.String(20), unique=True, nullable=False),
+
+ )
+
+
+
 users = db.Table(
 	'users',
 	metadata_obj,
