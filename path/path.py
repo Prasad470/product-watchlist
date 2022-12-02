@@ -8,8 +8,9 @@ from werkzeug.utils import secure_filename
 import os 
 import sqlalchemy as db
 from flask import Blueprint
+from app import app 
 path=Blueprint("path",__name__,static_folder="static")
-app = Flask(__name__)
+#app = Flask(__name__)
 
 
 
